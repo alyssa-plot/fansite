@@ -1,0 +1,473 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Open Sans,Arial,sans-serif;
+    margin: 0;
+    
+}
+
+/*////////////////////////////////////// NAVBAR /////////////////////////////////*/
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: white;
+    width: 100%;
+    height: 82px;
+    flex-direction: row;
+    padding-bottom: 1.5%;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    height: 82px;
+    padding-left: 72%;
+}
+
+nav ul {
+    margin-left: 22%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 8%;
+}
+
+nav ul li {
+    float: left;
+    width: auto;
+    padding-left: 2%;
+    text-align: center;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #FF4A54;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #c23b41;
+    border-bottom: 2px solid orange;
+    transition: 0.8s;
+}
+
+/*////////////////////////////////////// SUZIHANDICAP /////////////////////////////////*/
+
+.struct-two img {
+    padding-top: 5%;
+    padding-left: 29%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 300px;
+    padding-top: 8%;
+}
+
+
+.container .box2 {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background: #000;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 45px;
+}
+
+.container:hover .box2 {
+    transform: rotateY(25deg);
+}
+
+.container .box:hover ~ .box2 {
+    transform: rotateY(-25deg);
+}
+
+.container .box2:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+
+.container .box2 .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .box2 .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#b06680,#fff);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+}
+  
+.container .box2:hover .imgBx:before {
+    opacity: 1;
+}
+  .container .box2 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .box2 .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.container .box2 .content h2 {
+    color: #fff;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 250px;
+    font-size: 20px;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+}
+
+.container .box2:hover:hover .content h2 {
+    transform: translateY(200px);
+}
+
+.container .box2 .content p {
+    color: #fff;
+    transition: 0.5s;
+    font-size: 13px;
+    transform: translateY(20px);
+    transition-delay: 0.4s;
+}
+
+.container .box:hover .content p {
+    transform: translateY(0px);
+}
+
+/*////////////////////////////////////// HELIOS /////////////////////////////////*/
+.wrapper {
+    height: 45vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    width: 17ch;
+    animation: typing 2s steps(12), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+        
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.img-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.helios {
+    /*width: 30%;*/
+    height: 400px;
+    padding-left: 15%;
+}
+
+.helios-lpb {
+    /*width: 40%;*/
+    height: 400px;
+    padding-right: 15%;
+}
+
+/*////////////////////////////////////// QUI SOMMES NOUS ? /////////////////////////////////*/
+
+/*------------------------- struct one ---------------------*/
+
+#app {
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+  
+#wrapper {
+    text-align: center;
+}
+
+.sub {
+    color: #ff4a54;
+    letter-spacing: 1em;
+  }
+  
+  @mixin glitchCopy {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch {
+    position: relative;
+    color: #fff;
+    font-size: 4em;
+    letter-spacing: 0.5em;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+  }
+
+/*------------------------- struct two ---------------------*/
+
+.struct-two {
+    width: 100%;
+    height: 600px;
+    margin-top: -1%;
+    display: flex;
+}
+
+.two-left {
+    width: 50%;
+    height: 100%;
+    text-align: justify;
+}
+
+.two-left h1{
+    color: #121214;
+    font-size: 17px;
+    font-weight: 300;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 22%;
+}
+
+.two-right {
+    width: 50%;
+    height: 100%;
+}
+
+.two-right img {
+    margin-top: 9.5%;
+    margin-left: 13%;
+    width: 74.9%;
+    border: 5px solid #FF4A54;
+    padding: 0;
+}
+
+.two-left button {
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-bottom: 10%;
+    display: inline-block;
+    padding: 5px;
+    font-size: 18px;
+    width: 222px;
+    height: 38px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: #ff4a54;
+    border: none;
+    border-radius: 100px;
+    box-shadow: grey 0 10px 20px -15px;
+}
+
+/*------------------------- struct three ---------------------*/
+
+.struct-three {
+    width: 100%;
+    height: 600px;
+    margin-top: -1%;
+    display: flex;
+}
+
+.three-right {
+    width: 50%;
+    height: 100%;
+    text-align: justify;
+}
+
+.three-right h1{
+    color: #121214;
+    font-size: 15px;
+    font-weight: 300;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.three-left {
+    width: 50%;
+    height: 100%;
+}
+
+.three-left img {
+    margin-top: 5%;
+    margin-left: 13%;
+    width: 74.9%;
+    border: 5px solid #FF4A54;
+}
+
+/*//////////////////formulaire mecontacter//////////////*/
+
+.contactez-nous {
+width: 700px;
+border: 1px solid;
+border-radius: 8px;
+padding: 0 50px 0 50px;
+background: white;
+padding-left: 22%;
+padding-top: 30px;
+}
+
+.contactez-nous > h1 {
+font-weight: 500;
+}
+
+.contactez-nous > p {
+font-weight: 300;
+}
+
+form div {
+width: 100%;
+display: flex;
+flex-direction: column;
+min-height: 83px;
+margin-top: 25px;
+}
+
+form div > label {
+margin-bottom: 7px;
+font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea {
+background: #FFD9D9;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+font-weight: 500;
+font-family: Montserrat, "sans-serif";
+}
+
+form div > input, form div > select {
+height: 50px;
+padding-left: 10px;
+}
+
+form div > select {
+appearance: none;
+background-size: 15px;
+background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDIxMy4zMzMgMjEzLjMzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cG9seWdvbiBwb2ludHM9IjAsNTMuMzMzIDEwNi42NjcsMTYwIDIxMy4zMzMsNTMuMzMzICAgIiBmaWxsPSIjMzAzMDMwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BvbHlnb24+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==');
+background-position: right 10px top 50%;
+background-repeat: no-repeat;
+}
+
+form div > textarea {
+height: 195px;
+padding: 15px 0px 0px 10px;
+}
+
+form div > input::placeholder, form div > textarea::placeholder {
+    color: rgb(27, 26, 26);
+    }
+
+form div > select:invalid {
+color: rgb(27, 26, 26);
+}
+
+form div > select option {
+background: white;
+color: #303030;
+}
+
+form div:last-child {
+align-items:center;
+margin-top: 20px;
+}
+
+form button {
+width: 450px;
+max-width: 500px;
+height: 60px;
+font-weight: 700;
+font-size: 28px;
+background: white;
+border: rgba(48, 48, 48, 0.5) solid 1px;
+border-radius: 5px;
+box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+color: #303030;
+}
+
+footer {
+    padding: 10px 20px;
+    background: rgb(9, 9, 9);
+    color: white;
+  }
+  a {
+    color: #FF4A54;
+  }
+
+
+  
+
+  
